@@ -29,16 +29,28 @@
  * [2020-09-09] Fixed Kirby spawn (5)
  */
 
-var resultBox = document.querySelector('#result');
-var stageBox = document.querySelector('#stage');
-var spawnBox = document.querySelector('#spawn');
-var numTargetsBox = document.querySelector('#num-targets');
-var numTargetsDiv = document.querySelector('#num-targets-div');
-var optionsButton = document.querySelector('#show-options');
-var optionsDiv = document.querySelector('#options-div');
-var characterRandomizerCheckboxDiv = document.querySelector('#character-randomizer-checkbox-div');
-var characterRandomizerCheckbox = document.querySelector('#character-randomizer-checkbox');
-var characterRandomizerNote = document.querySelector('#character-randomizer-note');
+var resultBox, stageBox, spawnBox, numTargetsBox,
+	numTargetsDiv, optionsButton, optionsDiv,
+	characterRandomizerCheckboxDiv, 
+	characterRandomizerCheckbox,
+	characterRandomizerNote;
+
+function setGlobals() {
+	resultBox = document.querySelector('#result');
+	stageBox = document.querySelector('#stage');
+	spawnBox = document.querySelector('#spawn');
+	numTargetsBox = document.querySelector('#num-targets');
+	numTargetsDiv = document.querySelector('#num-targets-div');
+	optionsButton = document.querySelector('#show-options');
+	optionsDiv = document.querySelector('#options-div');
+	characterRandomizerCheckboxDiv = document.querySelector('#character-randomizer-checkbox-div');
+	characterRandomizerCheckbox = document.querySelector('#character-randomizer-checkbox');
+	characterRandomizerNote = document.querySelector('#character-randomizer-note');	
+}
+
+window.onload = function() {
+	setGlobals();
+}
 
 function randomize() {
 	var spawn = false;
