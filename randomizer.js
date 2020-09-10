@@ -30,7 +30,6 @@
  * [2020-09-09] Randomizer ID feature (version 0.6)
  */
 
-includeJs("seedrandom.js");
 
 // globals
 var resultBox, stageBox, spawnBox, numTargetsBox,
@@ -40,6 +39,9 @@ var resultBox, stageBox, spawnBox, numTargetsBox,
 	characterRandomizerNote, idBox, getRandom;
 
 function setGlobals() {
+	// functions
+	includeJs("seedrandom.js");
+	// variables
 	resultBox = document.querySelector('#result');
 	stageBox = document.querySelector('#stage');
 	spawnBox = document.querySelector('#spawn');
